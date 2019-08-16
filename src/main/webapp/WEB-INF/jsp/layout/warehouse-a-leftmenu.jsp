@@ -35,7 +35,7 @@
 				<li class="cui-menu-left-divider">
 					<!-- -->
 				</li>
-				<li class="cui-menu-left-item"><a href=""> <span
+				<li class="cui-menu-left-item"><a href="sm-warehouse-a-upload-bill"> <span
 						class="cui-menu-left-icon icmn-books"></span> <span
 						class="cui-menu-left-title">Upload Bill</span>
 				</a></li>

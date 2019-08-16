@@ -33,6 +33,8 @@ function setTableData(dataSet) {
 		}, {
 			"data" : "quantity"
 		}, {
+			"data" : "amConsingementTrackC2p.consingementNo"
+		}, {
 			"data" : "amConsingementTrackC2p.actArrivalDate"
 		} ]
 	});

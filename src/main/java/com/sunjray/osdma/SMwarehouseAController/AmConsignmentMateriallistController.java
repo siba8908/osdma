@@ -18,7 +18,7 @@ public class AmConsignmentMateriallistController {
 	private AmConsignmentMateriallistRepository amConsignmentMateriallistRepository;
 
 	@GetMapping("/fetch-consignment-material-list")
-	public List<AmConsignmentMateriallist> getAllConsignmentTrackP2a() {
+	public List<AmConsignmentMateriallist> getAllConsignmentMateriallist() {
 		return amConsignmentMateriallistRepository.findAll();
 	}
 

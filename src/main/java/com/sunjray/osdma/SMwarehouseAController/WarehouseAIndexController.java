@@ -21,6 +21,11 @@ public class WarehouseAIndexController {
 		return "WAREHOUSE-A/sm-warehouse-a-material-list";
 	}
 
+	@RequestMapping("/sm-warehouse-a-upload-bill")
+	String smWarehouseAUploadBill() {
+		return "WAREHOUSE-A/sm-warehouse-a-upload-bill";
+	}
+
 	@RequestMapping("/sm-warehouse-a-stocks")
 	String smWarehouseAStocks() {
 		return "WAREHOUSE-A/sm-warehouse-a-stocks";

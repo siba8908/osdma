@@ -46,6 +46,7 @@
 													<th>Material Name</th>
 													<th>Item Code</th>
 													<th>Quantity</th>
+													<th>Consignment No</th>
 													<th>Godown Received Date</th>
 
 												</tr>

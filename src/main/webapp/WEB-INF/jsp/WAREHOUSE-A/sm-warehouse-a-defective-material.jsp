@@ -21,7 +21,6 @@
 					<section class="card">
 						<div class="card-header">
 							<span class="cui-utils-title">
-
 								<h3 class="text-black">
 									<strong>WAREHOUSE-A</strong>
 								</h3>
@@ -31,13 +30,15 @@
 						</div>
 
 						<div class="table-responsive mb-6">
-							<table class="table table-hover table-bordered ">
+							<table class="table table-hover table-bordered "
+								id="defectiveMaterialReportTable">
 								<thead>
 									<tr
 										style="background-color: #06F; text-align: center; font-weight: bold;">
 										<th>Sl No</th>
+										<th>Serial No</th>
 										<th>Item Code</th>
-										<th>Description</th>
+										<th>Barcode</th>
 										<th>Quantity</th>
 										<th>Receiving Date</th>
 										<th>Remark</th>
@@ -45,130 +46,16 @@
 									</tr>
 								</thead>
 								<tbody>
-									<tr>
-										<td style="text-align: center">12365</td>
-										<td style="text-align: center">654</td>
-										<td style="text-align: center">Product Description</td>
-										<td style="text-align: center">10</td>
-										<td class="txt1"><input type="text" class="form-control"
-											placeholder="Select Date" id="datepicker-only-init"
-											data-toggle="datetimepicker"
-											data-target="#datepicker-only-init" /></td>
-										<td style="text-align: center">Good</td>
-									</tr>
-									<tr>
-										<td style="text-align: center">19875</td>
-										<td style="text-align: center">642</td>
-										<td style="text-align: center">Product Description</td>
-										<td style="text-align: center">03</td>
-										<td class="txt1"><input type="text" class="form-control"
-											placeholder="Select Date" id="datepicker-only-init1"
-											data-toggle="datetimepicker"
-											data-target="#datepicker-only-init1" /></td>
-										<td style="text-align: center">Good</td>
-									</tr>
-									<tr>
-										<td style="text-align: center">12300</td>
-										<td style="text-align: center">321</td>
-										<td style="text-align: center">Product Description</td>
-										<td style="text-align: center">05</td>
-										<td class="txt1"><input type="text" class="form-control"
-											placeholder="Select Date" id="datepicker-only-init2"
-											data-toggle="datetimepicker"
-											data-target="#datepicker-only-init2" /></td>
-										<td style="text-align: center">Good</td>
-									</tr>
-
-									<td style="text-align: center">12365</td>
-									<td style="text-align: center">987</td>
-									<td style="text-align: center">Product Description</td>
-									<td style="text-align: center">10</td>
-									<td class="txt1"><input type="text" class="form-control"
-										placeholder="Select Date" id="datepicker-only-init3"
-										data-toggle="datetimepicker"
-										data-target="#datepicker-only-init3" /></td>
-									<td style="text-align: center">Good</td>
-									</tr>
-
-
 								</tbody>
 								<tfoot>
 
 								</tfoot>
 							</table>
-							<a href="javascript: void(0);" class="btn btn-sm btn-primary"
-								style="float: right">
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SAVE
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a>
 						</div>
+					</section>
 				</div>
 			</div>
-
-
-
-
-
 			<!-- END: forms/form-validation -->
-
-			<!-- START: page scripts -->
-			<script>
-				;
-				(function($) {
-					'use strict'
-					$(function() {
-						$('#datepicker-only-init').datetimepicker({
-							icons : {
-								time : 'fa fa-clock-o',
-								date : 'fa fa-calendar',
-								up : 'fa fa-arrow-up',
-								down : 'fa fa-arrow-down',
-								previous : 'fa fa-arrow-left',
-								next : 'fa fa-arrow-right',
-							},
-							format : 'LL',
-						})
-						$('#datepicker-only-init1').datetimepicker({
-							icons : {
-								time : 'fa fa-clock-o',
-								date : 'fa fa-calendar',
-								up : 'fa fa-arrow-up',
-								down : 'fa fa-arrow-down',
-								previous : 'fa fa-arrow-left',
-								next : 'fa fa-arrow-right',
-							},
-							format : 'LL',
-						})
-
-						$('#datepicker-only-init2').datetimepicker({
-							icons : {
-								time : 'fa fa-clock-o',
-								date : 'fa fa-calendar',
-								up : 'fa fa-arrow-up',
-								down : 'fa fa-arrow-down',
-								previous : 'fa fa-arrow-left',
-								next : 'fa fa-arrow-right',
-							},
-							format : 'LL',
-
-						})
-						$('#datepicker-only-init3').datetimepicker({
-							icons : {
-								time : 'fa fa-clock-o',
-								date : 'fa fa-calendar',
-								up : 'fa fa-arrow-up',
-								down : 'fa fa-arrow-down',
-								previous : 'fa fa-arrow-left',
-								next : 'fa fa-arrow-right',
-							},
-							format : 'LL',
-						})
-					})
-				})
-
-				(jQuery)
-			</script>
-			<!-- END: page scripts -->
-
 		</div>
 	</div>
 	<div class="cui-layout-footer">
@@ -199,8 +86,8 @@
 				<div class="cui-footer-company">
 					<img class="cui-footer-company-logo"
 						src="../components/dummy-assets/common/img/N-m.png" width="90"
-						height="auto" title="#" /> <span> © 2019 <a
-						href="#" target="_blank">Powered by Nucigent Technology</a>
+						height="auto" title="#" /> <span> © 2019 <a href="#"
+						target="_blank">Powered by Nucigent Technology</a>
 
 					</span>
 				</div>
@@ -210,11 +97,18 @@
 	<a href="javascript: void(0);" class="cui-utils-scroll-top"
 		onclick="$('body, html').animate({'scrollTop': 0}, 500)"><i
 		class="icmn-arrow-up"></i></a>
-	</div>
-	</div>
-	</div>
-	</div>
-	</div>
-</body>
 
+	<script src="vendors/data-table/datatables.min.js"></script>
+	<script src="vendors/data-table/dataTables.bootstrap.min.js"></script>
+	<script src="vendors/data-table/dataTables.buttons.min.js"></script>
+	<script src="vendors/data-table/buttons.bootstrap.min.js"></script>
+	<script src="vendors/data-table/jszip.min.js"></script>
+	<script src="vendors/data-table/pdfmake.min.js"></script>
+	<script src="vendors/data-table/vfs_fonts.js"></script>
+	<script src="vendors/data-table/buttons.html5.min.js"></script>
+	<script src="vendors/data-table/buttons.print.min.js"></script>
+	<script src="vendors/data-table/buttons.colVis.min.js"></script>
+	<script src="vendors/data-table/datatables-init.js"></script>
+	<script src="warehouseA/defectiveMaterial.js"></script>
+</body>
 </html>
