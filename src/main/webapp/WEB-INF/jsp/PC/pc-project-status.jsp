@@ -29,11 +29,11 @@
 
 						<div class="table-responsive mb-5">
 
-							<table class="table table-hover">
-								<thead>
+							<table class="table table-hover" id = "workStatusTable">
+								<!-- <thead>
 
 									<tr style="background-color: #09F">
-										<th>Station Code</th>
+										<th>Site Code</th>
 										<th>Site Survey</th>
 										<th>Civil Work</th>
 										<th>Electrical Work</th>
@@ -94,150 +94,13 @@
 										<td>45%</td>
 										<td>45%</td>
 									</tr>
-								</tbody>
+								</tbody> -->
 								<tfoot>
 							</table>
 						</div>
+					</section>
+					<!-- END: forms/selectboxes -->
 
-						<!-- END: forms/selectboxes -->
-
-						<!-- START: page scripts -->
-						<script>
-							;
-							(function($) {
-								'use strict'
-								$(function() {
-									$('#datepicker-only-init').datetimepicker({
-										icons : {
-											time : 'fa fa-clock-o',
-											date : 'fa fa-calendar',
-											up : 'fa fa-arrow-up',
-											down : 'fa fa-arrow-down',
-											previous : 'fa fa-arrow-left',
-											next : 'fa fa-arrow-right',
-										},
-										format : 'LL',
-									})
-									$('#datepicker-only-init1')
-											.datetimepicker(
-													{
-														icons : {
-															time : 'fa fa-clock-o',
-															date : 'fa fa-calendar',
-															up : 'fa fa-arrow-up',
-															down : 'fa fa-arrow-down',
-															previous : 'fa fa-arrow-left',
-															next : 'fa fa-arrow-right',
-														},
-														format : 'LL',
-													})
-									$('#datepicker-only-init2')
-											.datetimepicker(
-													{
-														icons : {
-															time : 'fa fa-clock-o',
-															date : 'fa fa-calendar',
-															up : 'fa fa-arrow-up',
-															down : 'fa fa-arrow-down',
-															previous : 'fa fa-arrow-left',
-															next : 'fa fa-arrow-right',
-														},
-														format : 'LL',
-													})
-									$('#datepicker-only-init3')
-											.datetimepicker(
-													{
-														icons : {
-															time : 'fa fa-clock-o',
-															date : 'fa fa-calendar',
-															up : 'fa fa-arrow-up',
-															down : 'fa fa-arrow-down',
-															previous : 'fa fa-arrow-left',
-															next : 'fa fa-arrow-right',
-														},
-														format : 'LL',
-													})
-									$('#datepicker-only-init4')
-											.datetimepicker(
-													{
-														icons : {
-															time : 'fa fa-clock-o',
-															date : 'fa fa-calendar',
-															up : 'fa fa-arrow-up',
-															down : 'fa fa-arrow-down',
-															previous : 'fa fa-arrow-left',
-															next : 'fa fa-arrow-right',
-														},
-														format : 'LL',
-													})
-									$('#datepicker-only-init').datetimepicker({
-										icons : {
-											time : 'fa fa-clock-o',
-											date : 'fa fa-calendar',
-											up : 'fa fa-arrow-up',
-											down : 'fa fa-arrow-down',
-											previous : 'fa fa-arrow-left',
-											next : 'fa fa-arrow-right',
-										},
-										format : 'LL',
-									})
-									$('#datepicker-only-init6')
-											.datetimepicker(
-													{
-														icons : {
-															time : 'fa fa-clock-o',
-															date : 'fa fa-calendar',
-															up : 'fa fa-arrow-up',
-															down : 'fa fa-arrow-down',
-															previous : 'fa fa-arrow-left',
-															next : 'fa fa-arrow-right',
-														},
-														format : 'LL',
-													})
-									$('#datepicker-only-init7')
-											.datetimepicker(
-													{
-														icons : {
-															time : 'fa fa-clock-o',
-															date : 'fa fa-calendar',
-															up : 'fa fa-arrow-up',
-															down : 'fa fa-arrow-down',
-															previous : 'fa fa-arrow-left',
-															next : 'fa fa-arrow-right',
-														},
-														format : 'LL',
-													})
-									$('#datepicker-only-init8')
-											.datetimepicker(
-													{
-														icons : {
-															time : 'fa fa-clock-o',
-															date : 'fa fa-calendar',
-															up : 'fa fa-arrow-up',
-															down : 'fa fa-arrow-down',
-															previous : 'fa fa-arrow-left',
-															next : 'fa fa-arrow-right',
-														},
-														format : 'LL',
-													})
-									$('#datepicker-only-init9')
-											.datetimepicker(
-													{
-														icons : {
-															time : 'fa fa-clock-o',
-															date : 'fa fa-calendar',
-															up : 'fa fa-arrow-up',
-															down : 'fa fa-arrow-down',
-															previous : 'fa fa-arrow-left',
-															next : 'fa fa-arrow-right',
-														},
-														format : 'LL',
-													})
-
-								})
-							})(jQuery)
-						</script>
-						<!-- END: page scripts -->
 				</div>
 			</div>
 			<div class="cui-layout-footer">
@@ -276,6 +139,17 @@
 			</div>
 		</div>
 	</div>
-	<script src="osdmajs/common.js"></script>
+	<script src="vendors/data-table/datatables.min.js"></script>
+	<script src="vendors/data-table/dataTables.bootstrap.min.js"></script>
+	<script src="vendors/data-table/dataTables.buttons.min.js"></script>
+	<script src="vendors/data-table/buttons.bootstrap.min.js"></script>
+	<script src="vendors/data-table/jszip.min.js"></script>
+	<script src="vendors/data-table/pdfmake.min.js"></script>
+	<script src="vendors/data-table/vfs_fonts.js"></script>
+	<script src="vendors/data-table/buttons.html5.min.js"></script>
+	<script src="vendors/data-table/buttons.print.min.js"></script>
+	<script src="vendors/data-table/buttons.colVis.min.js"></script>
+	<script src="vendors/data-table/datatables-init.js"></script>
+	<script src="pc/pc-work-status.js"></script>
 </body>
 </html>

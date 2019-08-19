@@ -41,28 +41,18 @@ public class PmTeamTaskMap implements java.io.Serializable {
 	private Date createdOn;
 	private Integer modifyBy;
 	private Date modifyOn;
+	
+	@Column(name = "task_status", length = 20)
+	private String taskStatus;
 
-	public PmTeamTaskMap() {
+	
+
+	public String getTaskStatus() {
+		return taskStatus;
 	}
 
-	public PmTeamTaskMap(MasterStationType masterStationType, MasterTask masterTask, MasterTeam masterTeam,
-			Project project, Sitecode sitecode, Date startDate, Date endDate, Double budget, Date actStartDate,
-			Date actEndDate, Double actualCost, Integer createdBy, Date createdOn, Integer modifyBy, Date modifyOn) {
-		this.masterStationType = masterStationType;
-		this.masterTask = masterTask;
-		this.masterTeam = masterTeam;
-		this.project = project;
-		this.sitecode = sitecode;
-		this.startDate = startDate;
-		this.endDate = endDate;
-		this.budget = budget;
-		this.actStartDate = actStartDate;
-		this.actEndDate = actEndDate;
-		this.actualCost = actualCost;
-		this.createdBy = createdBy;
-		this.createdOn = createdOn;
-		this.modifyBy = modifyBy;
-		this.modifyOn = modifyOn;
+	public void setTaskStatus(String taskStatus) {
+		this.taskStatus = taskStatus;
 	}
 
 	@Id

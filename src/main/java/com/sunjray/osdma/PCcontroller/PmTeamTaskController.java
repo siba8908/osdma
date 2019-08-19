@@ -1,6 +1,7 @@
 package com.sunjray.osdma.PCcontroller;
 
 import java.util.List;
+import java.util.Map;
 
 import javax.validation.Valid;
 
@@ -34,5 +35,11 @@ public class PmTeamTaskController {
 	@ResponseStatus(HttpStatus.CREATED)
 	public void registerAccount(@Valid @RequestBody PmTeamTaskMap pmTeamTaskMap) {
 		pmTeamTaskService.update(pmTeamTaskMap);
+	}
+	
+	
+	@GetMapping("/get-work-status")
+	public List<Map<String, String>> getAllWorkStatus() {
+		return pmTeamTaskService.getAllWorkStatus();
 	}
 }
