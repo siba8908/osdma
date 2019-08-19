@@ -23,4 +23,9 @@ public class QaqcItemsController {
 		return qaqcItemsRepository.findByQuality(Quality.faulty);
 	}
 
+	@GetMapping("/fetch-stock-in")
+	public List<QaqcItems> fetchStockIn() {
+		return qaqcItemsRepository.findAll();
+	}
+
 }

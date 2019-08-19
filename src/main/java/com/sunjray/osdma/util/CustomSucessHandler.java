@@ -46,7 +46,7 @@ public class CustomSucessHandler extends SimpleUrlAuthenticationSuccessHandler {
       else if (authority.getAuthority().equals("ROLE_PC")) {
         usrDtl.setRolePC(true);
         try {
-          redirectStatergy.sendRedirect(request, response, "/pc/pc-dashboard");
+          redirectStatergy.sendRedirect(request, response, "/pc-dashboard");
         }
         catch (Exception e) {
           e.printStackTrace();
@@ -91,7 +91,7 @@ public class CustomSucessHandler extends SimpleUrlAuthenticationSuccessHandler {
       else if (authority.getAuthority().equals("ROLE_WA")) {
         usrDtl.setRoleWA(true);
         try {
-          redirectStatergy.sendRedirect(request, response, "/wa/wa-dashboard");
+          redirectStatergy.sendRedirect(request, response, "/sm-warehouse-a-dashboard");
         }
         catch (Exception e) {
           e.printStackTrace();
