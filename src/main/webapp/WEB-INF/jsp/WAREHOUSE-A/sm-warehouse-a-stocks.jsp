@@ -45,9 +45,8 @@
 													<th style=""><strong>Inward Date</strong></th>
 													<th><strong>Consigner</strong></th>
 													<th><strong>Consignee</strong></th>
-													<th><strong>Material Manufacture Code</strong></th>
-													<th><strong>Material Description</strong></th>
-													<th><strong>Storage Location</strong></th>
+													<th><strong>Bar Code</strong></th>
+													<th><strong>Serial Number</strong></th>
 													<th><strong>Quantity</strong></th>
 												</tr>
 											</thead>

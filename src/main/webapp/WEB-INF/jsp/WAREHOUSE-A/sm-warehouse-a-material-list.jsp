@@ -33,13 +33,14 @@
 							<code></code>
 						</p>
 						<div class="table-responsive mb-6">
-							<table class="table table-hover table-bordered ">
+							<table class="table table-hover table-bordered "
+								id="materialListReportTable">
 								<thead>
 									<tr
 										style="background-color: #06F; text-align: center; font-weight: bold;">
 										<th>SL No</th>
+										<th>Item Name</th>
 										<th>Material Manufacturer Code</th>
-										<th>Material Description</th>
 										<th>Quantity</th>
 										<th>Storage Location</th>
 										<th>Rack List</th>
@@ -47,237 +48,16 @@
 									</tr>
 								</thead>
 								<tbody>
-									<tr>
-										<td>12365</td>
-										<td style="text-align: center">987654</td>
-										<td>Material Description</td>
-										<td style="text-align: center">10</td>
-										<td><input type="text" class="form-control"
-											placeholder="" id="l1" /></td>
-										<td><input type="text" class="form-control"
-											placeholder="" id="l1" /></td>
-									</tr>
-									<tr>
-										<td>19875</td>
-										<td style="text-align: center">987554</td>
-										<td>Material Description</td>
-										<td style="text-align: center">03</td>
-										<td><input type="text" class="form-control"
-											placeholder="" id="l1" /></td>
-										<td><input type="text" class="form-control"
-											placeholder="" id="l1" /></td>
-									</tr>
-									<tr>
-										<td>12300</td>
-										<td style="text-align: center">321654</td>
-										<td>Material Description</td>
-										<td style="text-align: center">05</td>
-										<td><input type="text" class="form-control"
-											placeholder="" id="l1" /></td>
-										<td><input type="text" class="form-control"
-											placeholder="" id="l1" /></td>
-									</tr>
-
-									<td>12365</td>
-									<td style="text-align: center">987654</td>
-									<td>Material Description</td>
-									<td style="text-align: center">10</td>
-									<td><input type="text" class="form-control" placeholder=""
-										id="l1" /></td>
-									<td><input type="text" class="form-control" placeholder=""
-										id="l1" /></td>
-									</tr>
-
-
 								</tbody>
 								<tfoot>
-
 								</tfoot>
 							</table>
 							<a href="javascript: void(0);" class="btn btn-sm btn-primary"
-								style="float: right">
+								style="float: right" onclick="saveWarehouseAmaterialList()">
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SAVE
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a>
 						</div>
 					</div>
-				</div>
-
-
-				<div class="row">
-					<div class="col-lg-10" style="margin-left: 80px;">
-						<h4 style="color: 066; font-family: 'Arial Black', Gadget">
-							<strong>Bill Upload</strong>
-						</h4>
-						<p class="text-muted">
-							<code></code>
-						</p>
-						<div class="mb-8">
-							<table class="table table-hover nowrap table-bordered"
-								id="example1">
-								<thead>
-									<tr
-										style="background-color: FCC; text-align: center; font-weight: bold">
-										<th>Invoice No</th>
-										<th>Invoice Date</th>
-										<th>Upload Link</th>
-
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td><input type="text" class="form-control"
-											placeholder="" id="l1" /></td>
-										<td><input type="text" class="form-control"
-											placeholder="Select Date" id="datepicker-only-init"
-											data-toggle="datetimepicker"
-											data-target="datepicker-only-init" /></td>
-										<td><input type="file"></td>
-
-									</tr>
-									<tr>
-										<td><input type="text" class="form-control"
-											placeholder="" id="l1" /></td>
-										<td><input type="text" class="form-control"
-											placeholder="Select Date" id="datepicker-only-init"
-											data-toggle="datetimepicker"
-											data-target="datepicker-only-init" /></td>
-										<td><input type="file"></td>
-
-									</tr>
-									<tr>
-										<td><input type="text" class="form-control"
-											placeholder="" id="l1" /></td>
-										<td><input type="text" class="form-control"
-											placeholder="Select Date" id="datepicker-only-init"
-											data-toggle="datetimepicker"
-											data-target="datepicker-only-init" /></td>
-										<td><input type="file"></td>
-									</tr>
-
-									<tr>
-										<td><input type="text" class="form-control"
-											placeholder="" id="l1" /></td>
-										<td><input type="text" class="form-control"
-											placeholder="Select Date" id="datepicker-only-init"
-											data-toggle="datetimepicker"
-											data-target="datepicker-only-init" /></td>
-										<td><input type="file"></td>
-
-									</tr>
-
-								</tbody>
-								<tfoot>
-
-								</tfoot>
-							</table>
-							<a href="javascript: void(0);" class="btn btn-sm btn-primary"
-								style="float: right">
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SAVE
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a>
-						</div>
-						<div class="row">
-							<div class="col-lg-12">
-								<div class="mb-5"></div>
-							</div>
-						</div>
-					</div>
-					</section>
-					<!-- END: tables/datatables -->
-
-					<!-- START: page scripts -->
-					<script>
-						;
-						(function($) {
-							'use strict'
-							$(function() {
-								$('example1').DataTable({
-									responsive : true,
-								})
-
-								$('example2').DataTable({
-									autoWidth : true,
-									scrollX : true,
-									fixedColumns : true,
-								})
-
-								$('example3').DataTable({
-									autoWidth : true,
-									scrollX : true,
-									fixedColumns : true,
-								})
-							})
-						})(jQuery)
-
-						;
-						(function($) {
-							'use strict'
-							$(function() {
-								$('timepicker-init').datetimepicker({
-									icons : {
-										time : 'fa fa-clock-o',
-										date : 'fa fa-calendar',
-										up : 'fa fa-arrow-up',
-										down : 'fa fa-arrow-down',
-										previous : 'fa fa-arrow-left',
-										next : 'fa fa-arrow-right',
-									},
-									format : 'LT',
-								})
-
-								$('datepicker-only-init').datetimepicker({
-									icons : {
-										time : 'fa fa-clock-o',
-										date : 'fa fa-calendar',
-										up : 'fa fa-arrow-up',
-										down : 'fa fa-arrow-down',
-										previous : 'fa fa-arrow-left',
-										next : 'fa fa-arrow-right',
-									},
-									format : 'LL',
-								})
-
-								$('datetimepicker-init').datetimepicker({
-									icons : {
-										time : 'fa fa-clock-o',
-										date : 'fa fa-calendar',
-										up : 'fa fa-arrow-up',
-										down : 'fa fa-arrow-down',
-										previous : 'fa fa-arrow-left',
-										next : 'fa fa-arrow-right',
-									},
-								})
-
-								$('datepicker-inline-init').datetimepicker({
-									icons : {
-										time : 'fa fa-clock-o',
-										date : 'fa fa-calendar',
-										up : 'fa fa-arrow-up',
-										down : 'fa fa-arrow-down',
-										previous : 'fa fa-arrow-left',
-										next : 'fa fa-arrow-right',
-									},
-									inline : true,
-									sideBySide : false,
-								})
-
-								$('timepicker-inline-init').datetimepicker({
-									icons : {
-										time : 'fa fa-clock-o',
-										date : 'fa fa-calendar',
-										up : 'fa fa-arrow-up',
-										down : 'fa fa-arrow-down',
-										previous : 'fa fa-arrow-left',
-										next : 'fa fa-arrow-right',
-									},
-									format : 'LT',
-									inline : true,
-									sideBySide : false,
-								})
-							})
-						})(jQuery)
-					</script>
-					<!-- END: page scripts -->
-
 				</div>
 			</div>
 			<div class="cui-layout-footer">
@@ -324,6 +104,17 @@
 			</div>
 		</div>
 	</div>
+	<script src="vendors/data-table/datatables.min.js"></script>
+	<script src="vendors/data-table/dataTables.bootstrap.min.js"></script>
+	<script src="vendors/data-table/dataTables.buttons.min.js"></script>
+	<script src="vendors/data-table/buttons.bootstrap.min.js"></script>
+	<script src="vendors/data-table/jszip.min.js"></script>
+	<script src="vendors/data-table/pdfmake.min.js"></script>
+	<script src="vendors/data-table/vfs_fonts.js"></script>
+	<script src="vendors/data-table/buttons.html5.min.js"></script>
+	<script src="vendors/data-table/buttons.print.min.js"></script>
+	<script src="vendors/data-table/buttons.colVis.min.js"></script>
+	<script src="vendors/data-table/datatables-init.js"></script>
+	<script src="warehouseA/materialList.js"></script>
 </body>
-
 </html>
