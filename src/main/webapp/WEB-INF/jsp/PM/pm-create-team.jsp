@@ -24,9 +24,9 @@
 							<!-- Nav tabs -->
 							<ul class="nav nav-tabs" role="tablist">
 								<li role="presentation" class="active"><a href="#Section1"
-									aria-controls="home" role="tab" data-toggle="tab">View Team</a></li>
+									aria-controls="home" role="tab" data-toggle="tab" onclick = "fetchAllTeams()">View Team</a></li>
 								<li role="presentation"><a href="#Section2"
-									aria-controls="profile" role="tab" data-toggle="tab">Create
+									aria-controls="profile" role="tab" data-toggle="tab"  onclick = "fetchDetailsForCreateTeam()">Create
 										Team </a></li>
 							</ul>
 							<div class="tab-content tabs">
@@ -37,24 +37,25 @@
 												Teams :</strong>
 										</span>
 									</div>
-									<table class="table table-hover" id="teamMembersTable">
+									<table class="table table-hover" id="pmTeamTable">
 										<thead>
 											<tr style="background-color: #09F">
 												<th>Sl No.</th>
 												<th>Team Name</th>
+												<th>Action</th>
 											</tr>
 										</thead>
 										<tbody>
-											<tr>
+											<!-- <tr>
 												<td>1</td>
 												<td>xxx</td>
-												<!-- <td></td> -->
+												<td></td>
 											</tr>
 											<tr>
 												<td>2</td>
 												<td><a href ="#" data-toggle='modal' data-target='#modal'>yyy </a></td>
-												<!-- <td><button type="button" class="btn btn-info mr-2 mb-2">Update</button></td> -->
-											</tr>
+												<td><button type="button" class="btn btn-info mr-2 mb-2">Update</button></td>
+											</tr> -->
 										</tbody>
 									</table>
 								</div>
@@ -67,7 +68,7 @@
 									</div>
 
 									<div class="table-responsive mb-3">
-										<table class="table table-hover table-bordered">
+										<table class="table table-hover table-bordered" >
 											<thead>
 												<tr style="background-color: #09F; font-weight: bold">
 
@@ -87,42 +88,41 @@
 												</tr>
 												<tr>
 													<td><input class="form-control form-control-rounded"
-														type="text" placeholder="Enter team name" id="amount0"
+														type="text" placeholder="Enter team name" id="teamName"
 														style="height: auto;" /></td>
 													<td><select
-														class="form-control form-control-rounded siteCode"
-														style="margin-left: 5px" required id="siteCode0">
+														class="form-control form-control-rounded pc"
+														style="margin-left: 5px" required id="projectCoordinator">
 															<option value="">Select PC</option>
 													</select></td>
 													<td><select
-														class="form-control form-control-rounded siteCode"
-														style="margin-left: 5px" required id="siteCode0">
+														class="form-control form-control-rounded se"
+														style="margin-left: 5px" required id="siteEngineer">
 															<option value="">Select site engineer</option>
 													</select></td>
 													<td><select
-														class="form-control form-control-rounded siteCode"
-														style="margin-left: 5px" required id="siteCode0">
+														class="form-control form-control-rounded sm"
+														style="margin-left: 5px" required id="siteManager1">
 															<option value="">Select site manager</option>
 													</select></td>
 													<td><select
-														class="form-control form-control-rounded siteCode"
-														style="margin-left: 5px" required id="siteCode0">
+														class="form-control form-control-rounded sa"
+														style="margin-left: 5px" required id="siteAssistance1">
 															<option value="">Select site assistance</option>
 													</select></td>
 												</tr>
 												<tr>
-
 													<td></td>
 													<td></td>
 													<td></td>
 													<td><select
-														class="form-control form-control-rounded siteCode"
-														style="margin-left: 5px" required id="siteCode0">
+														class="form-control form-control-rounded sm"
+														style="margin-left: 5px" required id="siteManager2">
 															<option value="">Select site manager</option>
 													</select></td>
 													<td><select
-														class="form-control form-control-rounded siteCode"
-														style="margin-left: 5px" required id="siteCode0">
+														class="form-control form-control-rounded sa"
+														style="margin-left: 5px" required id="siteAssistance2">
 															<option value="">Select site assistance</option>
 													</select></td>
 												</tr>
@@ -131,7 +131,7 @@
 
 										<div style="float: right; margin-right: 15px;">
 											<button type="button" class="btn btn-info mr-2 mb-2"
-												onclick="submitLetterClearance()">Save</button>
+												onclick="createTeam()">Save</button>
 										</div>
 									</div>
 								</div>
@@ -255,6 +255,6 @@
 	<script src="vendors/data-table/buttons.print.min.js"></script>
 	<script src="vendors/data-table/buttons.colVis.min.js"></script>
 	<script src="vendors/data-table/datatables-init.js"></script>
-	<script src="pc/pc-team-update.js"></script>
+	<script src="pm/pm-create-team.js"></script>
 </body>
 </html>
