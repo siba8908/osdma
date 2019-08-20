@@ -57,7 +57,6 @@ function saveWarehouseAmaterialList(){
 		wareHouseAMaterial.rackList=$("#rackList"+index + 1+"").val();
 		wareHouseAMaterialList.push(wareHouseAMaterial);
 	});
-	console.log(wareHouseAMaterialList)
 	$.ajax({
         url: "api/save-warehouse-a-material-list",
         data: JSON.stringify(wareHouseAMaterialList),
