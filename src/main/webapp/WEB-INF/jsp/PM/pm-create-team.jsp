@@ -184,15 +184,17 @@
 		role="dialog" aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content" style="width: 650px; margin-left: -80px;">
-				<div class="modal-header"></div>
+				<div class="modal-header">
+					<h4> Team : <span id="selectedTeamName"></span></h4>
+				</div>
 				<div class="modal-body">
 					<table class="table table-hover" id="teamMembersTable">
 						<thead>
 							<tr style="background-color: #09F">
 								<th>Sl No.</th>
 								<th>Employee Name</th>
-								<th>Status</th>
-								<th>Action</th>
+								<th>Employee Code</th>
+								<th>Designation</th>
 							</tr>
 						</thead>
 						<tbody>

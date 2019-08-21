@@ -1,4 +1,5 @@
 var _tableAllTeams;
+var _tableTeamMembers;
 var projectCoordinatorOptions="";
 var siteManagerOptions="";
 var siteEngineerOptions="";
@@ -51,6 +52,71 @@ function setTableData(dataSet) {
         {"className": "dt-center", "targets": "_all"}]
 	});
 }
+
+
+function getTeamMembers(e) {
+	var data = _tableAllTeams.row($(e).parents('tr')).data();
+	console.log(data);
+	$("#selectedTeamName").text(data.teamName);
+	
+	teamData = {
+    		"masterTeam" : {
+    			"teamId" : data.teamId
+    		}
+    }
+	$.ajax({
+		url : "api/get-team-members",
+		data : JSON.stringify(teamData),
+		error : function(e) {
+			console.log(e)
+			swal({
+				position : 'top',
+				type : 'error',
+				text : 'Error in data fetch.',
+				showConfirmButton : false,
+				timer : 2500
+			})
+		},
+		success : function(data) {
+			console.log(data);
+			$.each(data, function(index) {
+				this.serialNo = index + 1;
+				this.employeeName = this.firstName + ' ' + this.lastName;
+			});
+			setTeamMemberTableData(data);
+			$("#modal").modal();
+			
+		},
+		dataType : "json",
+		contentType : 'application/json; charset=utf-8',
+		type : "POST",
+		cache : false,
+		crossDomain : true
+	});
+}
+
+function setTeamMemberTableData(dataSet) {
+	if (_tableTeamMembers) {
+		_tableTeamMembers.destroy();
+		$('#teamMembersTable tbody').off('click');
+	}
+	_tableTeamMembers = $('#teamMembersTable').DataTable({
+		data : dataSet,
+		columns : [ {
+			"data" : "serialNo"
+		}, {
+			"data" : "employeeName"
+		}, {
+			"data" : "employeeCode"
+		}, {
+			"data" : "designation"
+		}]
+	});
+	
+	
+}
+
+
 
 
 function fetchDetailsForCreateTeam() {
@@ -229,8 +295,9 @@ function createTeam() {
 		crossDomain : true
 	});
 	
-	
 }
+
+
 
 
 

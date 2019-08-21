@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.sunjray.osdma.PCmodel.MasterTeam;
+import com.sunjray.osdma.PCmodel.PmTeamMember;
 import com.sunjray.osdma.PCrepository.MasterTeamRepository;
 import com.sunjray.osdma.PCservice.MasterTeamService;
 import com.sunjray.osdma.dto.AppResponse;
@@ -56,6 +57,18 @@ public class MasterTeamController {
         return ResponseEntity.created(new URI("/api/create-team-with-members"))
 	            .headers(HeaderUtil.createEntityCreationAlert("MasterTeam", "created"))
 	            .body(new AppResponse("success"));
+    }
+    
+    
+    /**
+     * POST  /fetch-team-members : get  PmTeamMembers.
+     *
+     * @param PmTeamMember 
+     * @return the ResponseEntity with status 200 and with body the List of PmTeamMembers
+     */
+    @PostMapping("/get-team-members")
+    public List<TeamMemberDTO> getTeamMemberByTeam(@RequestBody PmTeamMember pmTeamMember) {
+        return masterTeamService.findByMasterTeam(pmTeamMember.getMasterTeam());
     }
 
 }
