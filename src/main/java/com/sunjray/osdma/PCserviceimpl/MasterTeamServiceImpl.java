@@ -15,7 +15,7 @@ import com.sunjray.osdma.PCmodel.PmTeamMember;
 import com.sunjray.osdma.PCrepository.MasterTeamRepository;
 import com.sunjray.osdma.PCrepository.PmTeamMemberRepository;
 import com.sunjray.osdma.PCservice.MasterTeamService;
-import com.sunjray.osdma.PMrepository.EmployeePersonalDetailsRepository;
+import com.sunjray.osdma.PMRepository.EmployeePersonalDetailsRepository;
 import com.sunjray.osdma.dto.TeamMemberDTO;
 import com.sunjray.osdma.util.CommonUtil;
 
