@@ -34,5 +34,12 @@ public class CommonUtil {
 		}
 		return null;
 	}
+	
+	public static String checkNullValue(Object object) {
+		if(object != null) {
+			return object.toString();
+		}
+		return "";
+	}
 
 }

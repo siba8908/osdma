@@ -47,3 +47,4 @@ public class MasterDesignation implements java.io.Serializable {
 	}
 
 }
+

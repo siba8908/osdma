@@ -27,7 +27,7 @@
 							</span>
 						</div>
 
-						<div class="table-responsive mb-5">
+						<div class="table-responsive">
 
 							<table class="table table-hover" id = "fund_request_table">
 								<thead>
