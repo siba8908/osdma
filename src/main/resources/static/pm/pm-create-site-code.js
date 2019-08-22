@@ -45,8 +45,8 @@ $(".btnAdd").click(function(){
 				+"<select class='form-control' id='stationType"+i+"'>"
 				+"<option value=''>Select Station Type</option></select>"
 				+"</div></td>"
-				+"<td><input type='text' placeholder='Enter Site Name' class='form-control' id='siteName0'></td>"
-				+"<td><input type='text' placeholder='Enter Site Code' class='form-control' id='siteCode0'></td>"
+				+"<td><input type='text' placeholder='Enter Site Code' class='form-control' id='siteCode"+i+"'></td>"
+				+"<td><input type='text' placeholder='Enter Site Name' class='form-control' id='siteName"+i+"'></td>"
 				+"<td><button class='fa fa-minus btnMinus' style='height: 30px'></button></td></tr>";
 	
 	$(".body-site-code-table").append(element);
@@ -59,3 +59,37 @@ $(".btnAdd").click(function(){
 	});
 
 });
+function saveSiteCode(){
+	var siteCodeList=[];
+	var rowCount=0;
+	$('#site-code-table > tbody  > tr').each(function() {
+		var siteCode={};
+		var project={};
+		var stationType={};
+		project.projectId=$("#projectName"+rowCount+"").val();
+		siteCode.project=project;
+		siteCode.siteCode=$("#siteCode"+rowCount+"").val();
+		siteCode.siteName=$("#siteName"+rowCount+"").val();
+		stationType.stationTypeId=$("#stationType"+rowCount+"").val();
+		siteCode.stationType=stationType;
+		siteCodeList.push(siteCode);
+		rowCount++;
+	});
+	$.ajax({
+        url: "api/save-site-code",
+        data: JSON.stringify(siteCodeList),
+        error: function (e) {
+        	window.location.reload();
+        },
+        success: function (data) {
+        	console.log(data)
+        	window.location.reload();
+        },
+        dataType: "json",
+        contentType: 'application/json; charset=utf-8',
+        type: "POST",
+        cache: false,
+        crossDomain: true
+    });
+
+}

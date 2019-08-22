@@ -29,7 +29,7 @@
 									<code></code>
 								</p>
 								<div class="table-responsive mb-6">
-									<table class="table table-hover table-bordered">
+									<table class="table table-hover table-bordered" id="site-code-table">
 										<thead>
 											<tr style="background-color: #06F; font-weight: bold">
 												<th><strong>Project Name</strong></th>
@@ -67,6 +67,10 @@
 										</tbody>
 
 									</table>
+									<a href="javascript: void(0);" class="btn btn-sm btn-primary"
+										style="float: right" onclick="saveSiteCode()">
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SEND
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a>
 								</div>
 
 							</div>
