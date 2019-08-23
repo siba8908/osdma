@@ -1,17 +1,15 @@
 package com.sunjray.osdma.PCmodel;
 // Generated Jul 29, 2019 8:46:52 PM by Hibernate Tools 4.3.5.Final
 
-import java.util.HashSet;
-import java.util.Set;
+import static javax.persistence.GenerationType.IDENTITY;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
-import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
@@ -21,14 +19,14 @@ import javax.persistence.Table;
 @Table(name = "t_os_master_task", catalog = "osdma")
 public class MasterTask implements java.io.Serializable {
 
+	private static final long serialVersionUID = 1L;
 	private Integer taskId;
-	private MasterWorkStage MasterWorkStage;
+	private MasterWorkStage masterWorkStage;
 	private String taskName;
 	private Integer duration;
 
 	public MasterTask() {
 	}
-
 
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
@@ -45,11 +43,11 @@ public class MasterTask implements java.io.Serializable {
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "work_stage")
 	public MasterWorkStage getMasterWorkStage() {
-		return this.MasterWorkStage;
+		return this.masterWorkStage;
 	}
 
-	public void setMasterWorkStage(MasterWorkStage MasterWorkStage) {
-		this.MasterWorkStage = MasterWorkStage;
+	public void setMasterWorkStage(MasterWorkStage masterWorkStage) {
+		this.masterWorkStage = masterWorkStage;
 	}
 
 	@Column(name = "task_name", length = 45)
