@@ -10,6 +10,11 @@ public class PMIndexController {
 	String pmcreatesitecode() {
 		return "PM/pm-create-site-code";
 	}
+	
+	@RequestMapping("/pm-site-location")
+	String pmsitelocation() {
+		return "PM/pm-site-location";
+	}
 
 	@RequestMapping("/pm-create-team")
 	String pmcreateteam() {

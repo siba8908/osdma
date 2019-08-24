@@ -19,85 +19,69 @@
 				<div class="cui-utils-content">
 					<!-- START: tables/basic-tables -->
 					<section class="card">
-						<div class="card-header"></div>
-
-						<div class="row">
-							<div class="col-lg-12">
-								<h4 class="text-black">
-									<strong></strong>
-								</h4>
-								<br />
-								<h5 style="color: #066; font-family: 'Arial Black', Gadget">
-									<strong>Create Task</strong>
-								</h5>
-								<p class="text-muted">
-									<code></code>
-								</p>
-								<div class="table-responsive mb-6">
-									<table class="table table-hover table-bordered">
+						<div class="tab" role="tabpanel">
+							<!-- Nav tabs -->
+							<ul class="nav nav-tabs" role="tablist">
+								<li role="presentation" class="active"><a href="#Section1"
+									aria-controls="home" role="tab" data-toggle="tab">Create
+										Task</a></li>
+								<li role="presentation"><a href="#Section2"
+									aria-controls="profile" role="tab" data-toggle="tab">View
+										Task </a></li>
+							</ul>
+							<div class="tab-content tabs">
+								<div role="tabpanel" class="tab-pane active" id="Section1">
+									<div class="card-header"
+										style="background-color: #FFF; color: #FFF">
+										<span class="cui-utils-title"> <strong>Create
+												Task :</strong>
+										</span>
+									</div>
+									<table class="table table-hover table-bordered" id="create-task-table">
 										<thead>
 											<tr style="background-color: #06F; font-weight: bold">
-												<th><strong>Sl No</strong></th>
 												<th><strong>Task Name</strong></th>
-												<th><strong>Workk Stage</strong></th>
+												<th><strong>Work Stage</strong></th>
 												<th>Duration</th>
-												<th></th>
+												<th>Add More</th>
 											</tr>
 										</thead>
-										<tbody>
-											<tr>
-												<td>01</td>
-												<td>Site Verification</td>
-												<td>Site Survey</td>
-												<td>10</td>
-												<td>
-													<div>
-
-														<a href="javascript: void(0);"
-															class="btn btn-sm btn-primary ml-10"> ADD </a>
-													</div>
-												</td>
-											</tr>
-
-
-											<tr>
-												<td>02</td>
-												<td>Site Preparation</td>
-												<td>Civil stage</td>
-												<td>20</td>
-												<td>
-													<div>
-
-														<a href="javascript: void(0);"
-															class="btn btn-sm btn-primary ml-10"> ADD </a>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>01</td>
-												<td>Installation</td>
-												<td>Electrical Stage</td>
-												<td>10</td>
-												<td>
-													<div>
-
-														<a href="javascript: void(0);"
-															class="btn btn-sm btn-primary ml-10"> ADD </a>
-													</div>
-												</td>
-											</tr>
-
+										<tbody class="body-create-task">
+											
 										</tbody>
 
 									</table>
+									<a href="javascript: void(0);" class="btn btn-sm btn-primary"
+								style="float: right" onclick="saveTask()">
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Save
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a>
+								</div>
+								<div role="tabpanel" class="tab-pane fade" id="Section2">
+									<div class="card-header"
+										style="background-color: #FFF; color: #FFF">
+										<span class="cui-utils-title"> <strong>View
+												Task :</strong>
+										</span>
+									</div>
+									<div class="table-responsive mb-3">
+										<table class="table table-hover table-bordered" id="masterTaskReportTable">
+											<thead>
+												<tr style="background-color: #06F; font-weight: bold">
+													<th><strong>Sl No</strong></th>
+													<th><strong>Task Name</strong></th>
+													<th><strong>Workk Stage</strong></th>
+													<th>Duration</th>
+													<th>Add More</th>
+												</tr>
+											</thead>
+											<tbody>
+											</tbody>
 
-									<div class="pull-right">
-
-										<a href="javascript: void(0);"
-											class="btn btn-sm btn-primary ml-10"> Update </a>
+										</table>
 									</div>
 								</div>
-							</div></div>
+							</div>
+						</div>
 					</section>
 					<!-- END: tables/basic-tables -->
 
@@ -144,6 +128,18 @@
 			</div>
 		</div>
 	</div>
+	<script src="vendors/data-table/datatables.min.js"></script>
+	<script src="vendors/data-table/dataTables.bootstrap.min.js"></script>
+	<script src="vendors/data-table/dataTables.buttons.min.js"></script>
+	<script src="vendors/data-table/buttons.bootstrap.min.js"></script>
+	<script src="vendors/data-table/jszip.min.js"></script>
+	<script src="vendors/data-table/pdfmake.min.js"></script>
+	<script src="vendors/data-table/vfs_fonts.js"></script>
+	<script src="vendors/data-table/buttons.html5.min.js"></script>
+	<script src="vendors/data-table/buttons.print.min.js"></script>
+	<script src="vendors/data-table/buttons.colVis.min.js"></script>
+	<script src="vendors/data-table/datatables-init.js"></script>
+	<script src="pm/pm-create-task.js"></script>
 </body>
 
 </html>

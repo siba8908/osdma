@@ -28,8 +28,11 @@
 						<span class="cui-menu-left-icon icmn-books"></span> <span
 						class="cui-menu-left-title">Create Site Code</span>
 				</a></li>
-
-
+				
+				<li class="cui-menu-left-item"><a href="pm-site-location">
+						<span class="cui-menu-left-icon icmn-books"></span> <span
+						class="cui-menu-left-title">View Site Location</span>
+				</a></li>
 
 				<li class="cui-menu-left-item"><a href="pm-create-team"> <span
 						class="cui-menu-left-icon icmn-books"></span> <span

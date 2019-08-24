@@ -34,7 +34,7 @@ function setTableData(dataSet) {
 		columns : [ {
 			"data" : "serialNo"
 		}, {
-			"data" : "sitecode"
+			"data" : "sitecode.siteCode"
 		}, {
 			"data" : "masterTask.taskName"
 		}, {

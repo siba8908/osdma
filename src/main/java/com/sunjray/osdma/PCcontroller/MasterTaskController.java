@@ -13,25 +13,24 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.sunjray.osdma.PCmodel.Sitecode;
-import com.sunjray.osdma.PCrepository.SitecodeRepository;
+import com.sunjray.osdma.PCmodel.MasterTask;
+import com.sunjray.osdma.PCrepository.MasterTaskRepository;
 
 @RestController
 @RequestMapping("/api")
-public class SiteCodeController {
-
+public class MasterTaskController {
 	@Autowired
-	private SitecodeRepository sitecodeRepository;
+	private MasterTaskRepository masterTaskRepository;
 
-	@GetMapping("/fetch-site-code")
-	public List<Sitecode> getAllSitecode() {
-		return sitecodeRepository.findAll();
+	@PostMapping("/save-master-task")
+	@ResponseStatus(HttpStatus.CREATED)
+	public void saveMasterTask(@Valid @RequestBody List<MasterTask> masterTask) {
+		masterTaskRepository.saveAll(masterTask);
 	}
 
-	@PostMapping("/save-site-code")
-	@ResponseStatus(HttpStatus.CREATED)
-	public void registerAccount(@Valid @RequestBody List<Sitecode> sitecode) {
-		sitecodeRepository.saveAll(sitecode);
+	@GetMapping("/fetch-master-task")
+	public List<MasterTask> getAllMasterTask() {
+		return masterTaskRepository.findAll();
 	}
 
 }
