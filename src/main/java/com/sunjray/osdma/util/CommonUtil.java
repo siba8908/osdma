@@ -4,6 +4,9 @@ import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.TimeZone;
 
@@ -13,6 +16,8 @@ import sun.misc.BASE64Decoder;
 
 @SuppressWarnings("restriction")
 public class CommonUtil {
+	
+	public static final DateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");;
 
 	public static String fetchTimeInMilliSeconds() {
 		Calendar cal = Calendar.getInstance(TimeZone.getTimeZone("NPT"));
@@ -38,6 +43,19 @@ public class CommonUtil {
 	public static String checkNullValue(Object object) {
 		if(object != null) {
 			return object.toString();
+		}
+		return "";
+	}
+	
+	
+	public static String convertToDD_MM_YYYY(Object object) {
+		if(object != null) {
+			try {
+				 return formatter.format(new SimpleDateFormat("yyyy-mm-dd").parse(object.toString()));
+			} catch (ParseException e) {
+				e.printStackTrace();
+				return "";
+			}
 		}
 		return "";
 	}
