@@ -61,7 +61,7 @@ public class PmTeamTaskServiceImpl implements PmTeamTaskService {
 						int totalTaskcount = 0;
 						int totalCompletedTask = 0;
 						if(teamTaskMap.getMasterTask().getMasterWorkStage().getStageId() == workStage.getStageId()) {
-							if(teamTaskMap.getTaskStatus().equalsIgnoreCase("COMPLETE")) {
+							if(teamTaskMap.getTaskStatus()==Status.COMPLETE) {
 								totalCompletedTask++;
 							}
 							totalTaskcount++;

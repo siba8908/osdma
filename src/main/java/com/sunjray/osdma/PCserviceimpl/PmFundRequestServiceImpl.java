@@ -8,6 +8,7 @@ import javax.validation.Valid;
 
 import org.springframework.stereotype.Service;
 
+import com.sunjray.osdma.PCenumeration.Status;
 import com.sunjray.osdma.PCmodel.PmFundRequest;
 import com.sunjray.osdma.PCrepository.PmFundRequestRepository;
 import com.sunjray.osdma.PCservice.PmFundRequestService;
@@ -28,7 +29,7 @@ public class PmFundRequestServiceImpl implements PmFundRequestService {
 	public void save(@Valid List<PmFundRequest> pmFundRequests) {
 
 		pmFundRequests.forEach(fundRequest->{
-			fundRequest.setStatus("PENDING");
+			fundRequest.setStatus(Status.PENDING);
 			fundRequest.setCreatedDate(new Date());
 		});
 		

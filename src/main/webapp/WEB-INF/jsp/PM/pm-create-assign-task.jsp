@@ -30,7 +30,7 @@
 								</p>
 								<div class="table-responsive mb-6">
 									<div class="form-group row"></div>
-									<table class="table table-hover table-bordered">
+									<table class="table table-hover table-bordered" id="create-assign-task-table">
 										<thead>
 											<tr style="background-color: #06F; font-weight: bold">
 												<th><strong>Project Name</strong></th>
@@ -39,66 +39,53 @@
 												<th><strong>Task Name</strong></th>
 												<th><strong>Work Stage</strong></th>
 												<th><strong>Team Name</strong></th>
-												<th><strong>Duration</strong></th>
-												<th></th>
+												<th><strong>Start Date</strong></th>
+												<th><strong>End Date</strong></th>
 												<th><strong>Budget</strong></th>
+												<th>Add More</th>
 											</tr>
 										</thead>
-										<tbody>
-											<tr style="background-color: #CCC; font-weight: bold">
-												<td></td>
-												<td></td>
-												<td></td>
-												<td></td>
-												<td></td>
-												<td></td>
-												<td><strong>Start Date</strong></td>
-												<td><strong>End Date</strong></td>
-												<td></td>
-											</tr>
+										<tbody class="body-create-team-task-table">
 											<tr style="color: #06C; text-align: center">
-												<td>1050 Station</td>
-												<td>Pur-NM-001</td>
-												<td>ARG/AWS</td>
-												<td>Site Varification</td>
-												<td>Site survey</td>
-												<td>Team A</td>
+												<td><select class="form-control projectName"
+													id="projectName0">
+														<option value="">Select Project</option>
+												</select></td>
+												<td><select class="form-control siteCode"
+													id="siteCode0">
+														<option value="">Select Site Code</option>
+												</select></td>
+												<td><select class="form-control stationType"
+													id="stationType0">
+														<option value="">Select Station Type</option>
+												</select></td>
+												<td><select class="form-control taskName"
+													id="taskName0">
+														<option value="">Select Task</option>
+												</select></td>
+												<td><select class="form-control workStage"
+													id="workStage0">
+														<option value="">Select Work Stage</option>
+												</select></td>
+												<td><select class="form-control teamName"
+													id="teamName0">
+														<option value="">Select Team</option>
+												</select></td>
 												<td><div class="form-group">
-														<input type="text" class="form-control"
-															placeholder="Select Date" id="datepicker-only-init"
-															data-toggle="datetimepicker"
-															data-target="#datepicker-only-init" />
+														<input type="text" class="form-control startDate"
+															placeholder="Start Date" id="startDate0"
+															data-toggle="datetimepicker" data-target="#startDate0" />
 													</div></td>
 
 												<td><div class="form-group">
-														<input type="text" class="form-control"
-															placeholder="Select Date" id="datepicker-only-init1"
-															data-toggle="datetimepicker"
-															data-target="#datepicker-only-init1" />
+														<input type="text" class="form-control endDate"
+															placeholder="End Date" id="endDate0"
+															data-toggle="datetimepicker" data-target="#endDate0" />
 													</div></td>
 
-												<td>80000</td>
-											</tr>
-											<tr style="color: #06C; text-align: center">
-												<td>1050 Station</td>
-												<td>Pur-NM-001</td>
-												<td>ARG/AWS</td>
-												<td>Site Varification</td>
-												<td>Site survey</td>
-												<td>Team A</td>
-												<td><div class="form-group">
-														<input type="text" class="form-control"
-															placeholder="Select Date" id="datepicker-only-init4"
-															data-toggle="datetimepicker"
-															data-target="#datepicker-only-init4" />
-													</div></td>
-												<td><div class="form-group">
-														<input type="text" class="form-control"
-															placeholder="Select Date" id="datepicker-only-init5"
-															data-toggle="datetimepicker"
-															data-target="#datepicker-only-init5" />
-													</div></td>
-												<td>80000</td>
+												<td><input type="number" id="budget0"></td>
+												<td><button class="fa fa-plus btnAdd"
+														style="height: 30px"></button></td>
 											</tr>
 										</tbody>
 
@@ -107,7 +94,7 @@
 									<div class="pull-right">
 
 										<a href="javascript: void(0);"
-											class="btn btn-sm btn-primary ml-10"> Save </a>
+											class="btn btn-sm btn-primary ml-10" onclick="saveAssignTask()"> Save </a>
 									</div>
 									<p>
 										<strong>Note:Notification Will go to team members.</strong>
@@ -116,87 +103,24 @@
 								<h3>
 									<strong>Display Task Search Site Code</strong>
 								</h3>
-								<table class="table table-hover table-bordered">
+								<table class="table table-hover table-bordered"
+									id="pmTeamTaskReportTable">
 									<thead>
 										<tr style="background-color: #06F; font-weight: bold">
-
+											<th><strong>Sl No.</strong></th>
 											<th><strong>Site code</strong></th>
 											<th><strong>Type of Station</strong></th>
 											<th><strong>Task Name</strong></th>
 											<th><strong>Work Stage</strong></th>
 											<th><strong>Team Name</strong></th>
 
-											<th><strong>Duration</strong></th>
-											<th></th>
+											<th><strong>Start Date</strong></th>
+											<th>End Date</th>
 											<th><strong>Budget</strong></th>
 											<th><strong>Status</strong></th>
 										</tr>
 									</thead>
 									<tbody>
-										<tr style="background-color: #CCC; font-weight: bold">
-
-											<td></td>
-											<td></td>
-											<td></td>
-											<td></td>
-											<td></td>
-
-											<td><strong>Start Date</strong></td>
-											<td><strong>End Date</strong></td>
-
-
-											<td></td>
-											<td></td>
-
-										</tr>
-										<tr style="color: #06C; text-align: center">
-
-											<td>Pur-NM-001</td>
-											<td>ARG/AWS</td>
-											<td>Site Varification</td>
-											<td>Site survey</td>
-											<td>Team A</td>
-											<td><div class="form-group">
-													<input type="text" class="form-control"
-														placeholder="Select Date" id="datepicker-only-init6"
-														data-toggle="datetimepicker"
-														data-target="#datepicker-only-init6" />
-												</div></td>
-
-											<td><div class="form-group">
-													<input type="text" class="form-control"
-														placeholder="Select Date" id="datepicker-only-init7"
-														data-toggle="datetimepicker"
-														data-target="#datepicker-only-init7" />
-												</div></td>
-
-											<td>80000</td>
-											<td>Open</td>
-										</tr>
-										<tr style="color: #06C; text-align: center">
-
-											<td>Pur-NM-001</td>
-											<td>ARG/AWS</td>
-											<td>Site Varification</td>
-											<td>Site survey</td>
-											<td>Team A</td>
-											<td><div class="form-group">
-													<input type="text" class="form-control"
-														placeholder="Select Date" id="datepicker-only-init8"
-														data-toggle="datetimepicker"
-														data-target="#datepicker-only-init8" />
-												</div></td>
-
-											<td><div class="form-group">
-													<input type="text" class="form-control"
-														placeholder="Select Date" id="datepicker-only-init9"
-														data-toggle="datetimepicker"
-														data-target="#datepicker-only-init9" />
-												</div></td>
-
-											<td>80000</td>
-											<td>Close</td>
-										</tr>
 									</tbody>
 								</table>
 							</div>
@@ -205,7 +129,13 @@
 					<!-- END: tables/basic-tables -->
 
 					<!-- START: page scripts -->
-
+					<script>
+						$(document).ready(function() {
+							$('.startDate').datetimepicker({
+								format : 'YYYY-DD-MM'
+							})
+						});
+					</script>
 					<!-- END: page scripts -->
 
 				</div>
@@ -247,6 +177,18 @@
 			</div>
 		</div>
 	</div>
+	<script src="vendors/data-table/datatables.min.js"></script>
+	<script src="vendors/data-table/dataTables.bootstrap.min.js"></script>
+	<script src="vendors/data-table/dataTables.buttons.min.js"></script>
+	<script src="vendors/data-table/buttons.bootstrap.min.js"></script>
+	<script src="vendors/data-table/jszip.min.js"></script>
+	<script src="vendors/data-table/pdfmake.min.js"></script>
+	<script src="vendors/data-table/vfs_fonts.js"></script>
+	<script src="vendors/data-table/buttons.html5.min.js"></script>
+	<script src="vendors/data-table/buttons.print.min.js"></script>
+	<script src="vendors/data-table/buttons.colVis.min.js"></script>
+	<script src="vendors/data-table/datatables-init.js"></script>
+	<script src="pm/pm-create-assign-task.js"></script>
 </body>
 
 </html>

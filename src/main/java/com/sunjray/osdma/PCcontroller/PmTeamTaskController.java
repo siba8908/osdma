@@ -42,4 +42,10 @@ public class PmTeamTaskController {
 	public List<Map<String, String>> getAllWorkStatus() {
 		return pmTeamTaskService.getAllWorkStatus();
 	}
+	
+	@PostMapping("/save-assign-task")
+	@ResponseStatus(HttpStatus.CREATED)
+	public void registerAccount(@Valid @RequestBody List<PmTeamTaskMap> pmTeamTaskMap) {
+		pmTeamTaskRepository.saveAll(pmTeamTaskMap);
+	}
 }

@@ -25,9 +25,8 @@ $(document).ready(function() {
 	      success: function (data) {
 	    	  $.each(data, function (index) {
 	    		  this.serialNo = index + 1;
-	    		  this.action="<button class='btn btn-sm btn-primary ml-10'>Edit</button>"
+	    		  this.action="<button type='button' class='btn btn-sm btn-primary btnEdit ml-10' data-toggle='modal' data-target='#updateTaskModal' onclick='showRowData(this)'>Edit</button>"
 	          });
-	    	  console.log(data)
 	    	  setTableData(data);
 	      },
 	      dataType: "json",
@@ -104,4 +103,36 @@ function setTableData(dataSet) {
 			"data" : "action"
 		} ]
 	});
+}
+function showRowData(event){
+	var currentRowData = _tableMasterTaskReports.row($(event).parents('tr')).data();
+	$("#taskId").val(currentRowData.taskId);
+	$("#taskName").val(currentRowData.taskName);
+	$("#workStage").val(currentRowData.masterWorkStage.stageId);
+	$("#duration").val(currentRowData.duration);
+}
+function updateTask(){
+	var task={};
+	var masterWorkStage={};
+	masterWorkStage.stageId=$("#workStage").val();
+	task.masterWorkStage=masterWorkStage;
+	task.taskName=$("#taskName").val();
+	task.duration=$("#duration").val()
+	task.taskId=$("#taskId").val();
+	
+	$.ajax({
+        url: "api/update-master-task",
+        data: JSON.stringify(task),
+        error: function (e) {
+        	window.location.reload();
+        },
+        success: function (data) {
+        	window.location.reload();
+        },
+        dataType: "json",
+        contentType: 'application/json; charset=utf-8',
+        type: "POST",
+        cache: false,
+        crossDomain: true
+    });
 }

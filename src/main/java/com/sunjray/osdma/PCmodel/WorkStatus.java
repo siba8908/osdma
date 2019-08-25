@@ -47,8 +47,9 @@ public class WorkStatus implements java.io.Serializable {
 	@Column(name = "work_image", length = 45)
 	private String workImage;
 
-	@Column(name = "verified_by")
-	private Integer verifiedBy;
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "verified_by", referencedColumnName = "user_id")
+	private User verifiedBy;
 
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "uploaded_by", referencedColumnName = "user_id")
@@ -114,11 +115,11 @@ public class WorkStatus implements java.io.Serializable {
 		this.workImage = workImage;
 	}
 
-	public Integer getVerifiedBy() {
+	public User getVerifiedBy() {
 		return verifiedBy;
 	}
 
-	public void setVerifiedBy(Integer verifiedBy) {
+	public void setVerifiedBy(User verifiedBy) {
 		this.verifiedBy = verifiedBy;
 	}
 
