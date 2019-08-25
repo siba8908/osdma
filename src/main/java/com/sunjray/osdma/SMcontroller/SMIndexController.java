@@ -22,5 +22,20 @@ public class SMIndexController {
 	String smWarehouseStocks() {
 		return "SM/sm-district-warehouse-stocks";
 	}
+	
+	@RequestMapping("/sm-logistics-dashboard")
+	String smLogisticDashboard() {
+		return "SM/sm-logistics-dashboard";
+	}
+	
+	@RequestMapping("/sm-logistics-order-tracking-details")
+	String smLogisticOrderTrackingDetails() {
+		return "SM/sm-logistics-order-tracking-details";
+	}
+	
+	@RequestMapping("/sm-logistics-status")
+	String smLogisticStatus() {
+		return "SM/sm-logistics-status";
+	}
 
 }
