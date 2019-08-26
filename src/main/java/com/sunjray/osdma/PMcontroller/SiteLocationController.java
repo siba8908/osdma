@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.sunjray.osdma.PMRepository.SiteLocationRepository;
 import com.sunjray.osdma.PMmodel.SiteLocation;
+import com.sunjray.osdma.PMrepository.SiteLocationRepository;
 
 @RestController
 @RequestMapping("/api")

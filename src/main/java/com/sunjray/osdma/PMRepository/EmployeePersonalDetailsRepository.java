@@ -1,4 +1,4 @@
-package com.sunjray.osdma.PMRepository;
+package com.sunjray.osdma.PMrepository;
 
 import java.util.List;
 

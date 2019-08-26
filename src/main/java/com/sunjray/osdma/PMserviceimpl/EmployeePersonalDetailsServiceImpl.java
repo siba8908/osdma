@@ -7,7 +7,7 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 
 import com.sunjray.osdma.PCmodel.EmployeePersonalDetails;
-import com.sunjray.osdma.PMRepository.EmployeePersonalDetailsRepository;
+import com.sunjray.osdma.PMrepository.EmployeePersonalDetailsRepository;
 import com.sunjray.osdma.PMservice.EmployeePersonalDetailsService;
 
 @Service
