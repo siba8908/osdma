@@ -6,7 +6,7 @@
 	class="cui-config-borderless cui-menu-left-toggled cui-menu-colorful cui-menu-left-shadow">
 	<div class="cui-initial-loading"></div>
 	<div class="cui-layout cui-layout-has-sider">
-		<jsp:include page="../layout/sm-leftmenu.jsp"></jsp:include>
+		<jsp:include page="../layout/district-warehouse-leftmenu.jsp"></jsp:include>
 
 		<div class="cui-layout">
 			<jsp:include page="../layout/header.jsp"></jsp:include>
