@@ -44,101 +44,57 @@
 														<strong>Project Name</strong>
 													</h4></th>
 												<th><h4>
-														<strong>Duration</strong>
+														<strong>Start Date</strong>
 													</h4></th>
-												<th></th>
+												<th><h4>
+														<strong>End Date</strong>
+													</h4></th>
+												<th>Station Type</th>
 												<th><h4>
 														<strong>No of Station</strong>
 													</h4></th>
-												<th></th>
-												<th></th>
+												<th><h4>
+														<strong>Add Station</strong>
+													</h4></th>
 											</tr>
 										</thead>
-										<tbody>
-											<tr style="background-color: #CCC; font-weight: bold">
-												<td></td>
-												<td></td>
-													<td><strong>Start Date</strong></td>
-													<td><strong>End Date</strong></td>
-
-													<td><strong>ARG</strong></td>
-													<td><strong>AWS</strong></td>
-													<td><strong>AWS-A</strong></td>
-											</tr>
+										<tbody class="body-create-project-table">
 											<tr style="color: #06C; text-align: center">
-												<td>OSDMA-Stage1</td>
-
-
-												<td>1050 Station</td>
 												<td><div class="form-group">
 														<input type="text" class="form-control"
-															placeholder="Select Date" id="datepicker-only-init"
-															data-toggle="datetimepicker"
-															data-target="#datepicker-only-init" />
+															placeholder="Enter Project Code" id="projectCode0" />
+													</div></td>
+												<td><div class="form-group">
+														<input type="text" class="form-control"
+															placeholder="Enter Project Name" id="projectName0" />
+													</div></td>
+												<td><div class="form-group">
+														<input type="text" class="form-control"
+															placeholder="Select Date" id="satrtDate0"
+															data-toggle="datetimepicker" data-target="#satrtDate0" />
 													</div></td>
 
 												<td><div class="form-group">
 														<input type="text" class="form-control"
-															placeholder="Select Date" id="datepicker-only-init1"
-															data-toggle="datetimepicker"
-															data-target="#datepicker-only-init1" />
+															placeholder="Select Date" id="endDate0"
+															data-toggle="datetimepicker" data-target="#endDate0" />
 													</div></td>
 
-												<td>80</td>
+												<td><div class="form-group">
+														<select class="form-control" id="stationType0">
+															<option value="">Select Station Type</option>
+														</select>
+													</div></td>
 
-												<td>90</td>
-												<td>700</td>
+												<td><div class="form-group">
+														<input type="text" class="form-control"
+															placeholder="Enter No. Of Station" id="noOfStation0" />
+													</div></td>
+												<td><div class="form-group">
+														<button class="fa fa-plus btnAdd" style="height: 30px"></button>
+													</div></td>
 											</tr>
 
-											<tr style="color: #06C; text-align: center">
-												<td>OSDMA-Stage1</td>
-
-
-												<td>1050 Station</td>
-												<td><div class="form-group">
-														<input type="text" class="form-control"
-															placeholder="Select Date" id="datepicker-only-init2"
-															data-toggle="datetimepicker"
-															data-target="#datepicker-only-init2" />
-													</div></td>
-
-												<td><div class="form-group">
-														<input type="text" class="form-control"
-															placeholder="Select Date" id="datepicker-only-init3"
-															data-toggle="datetimepicker"
-															data-target="#datepicker-only-init3" />
-													</div></td>
-
-												<td>80</td>
-
-												<td>90</td>
-												<td>700</td>
-											</tr>
-
-											<tr style="color: #06C; text-align: center">
-												<td>OSDMA-Stage1</td>
-
-
-												<td>1050 Station</td>
-												<td><div class="form-group">
-														<input type="text" class="form-control"
-															placeholder="Select Date" id="datepicker-only-init4"
-															data-toggle="datetimepicker"
-															data-target="#datepicker-only-init4" />
-													</div></td>
-
-												<td><div class="form-group">
-														<input type="text" class="form-control"
-															placeholder="Select Date" id="datepicker-only-init5"
-															data-toggle="datetimepicker"
-															data-target="#datepicker-only-init5" />
-													</div></td>
-
-												<td>80</td>
-
-												<td>90</td>
-												<td>700</td>
-											</tr>
 										</tbody>
 
 									</table>
@@ -146,10 +102,11 @@
 									<div class="pull-right">
 
 										<a href="javascript: void(0);"
-											class="btn btn-sm btn-primary ml-10"> Save </a>
+											class="btn btn-sm btn-primary ml-10" onclick="saveProject()"> Save </a>
 									</div>
 								</div>
-							</div></div>
+							</div>
+						</div>
 					</section>
 					<!-- END: tables/basic-tables -->
 
@@ -180,8 +137,8 @@
 											<div class="cui-footer-company">
 												<img class="cui-footer-company-logo"
 													src="../components/dummy-assets/common/img/N-m.png"
-													width="90" height="auto" title="#" /> <span>
-													© 2019 <a href="#" target="_blank">Powered by Nucigent
+													width="90" height="auto" title="#" /> <span> ©
+													2019 <a href="#" target="_blank">Powered by Nucigent
 														Technology</a>
 
 												</span>
@@ -196,6 +153,7 @@
 			</div>
 		</div>
 	</div>
+	<script src="pm/pm-create-project.js"></script>
 
 </body>
 

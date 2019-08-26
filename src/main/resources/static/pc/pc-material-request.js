@@ -161,9 +161,6 @@ function fetchProduct(index) {
 		},
 		dataType : "json",
 		contentType : 'application/json; charset=utf-8',
-		headers : {
-			"Authorization" : "Bearer " + window.sessionStorage.token
-		},
 		type : "POST",
 		cache : false,
 		crossDomain : true

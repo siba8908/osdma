@@ -32,5 +32,11 @@ public class MasterTaskController {
 	public List<MasterTask> getAllMasterTask() {
 		return masterTaskRepository.findAll();
 	}
+	
+	@PostMapping("/update-master-task")
+	@ResponseStatus(HttpStatus.CREATED)
+	public void updateMasterTask(@Valid @RequestBody MasterTask masterTask) {
+		masterTaskRepository.saveAndFlush(masterTask);
+	}
 
 }

@@ -37,7 +37,8 @@
 												Task :</strong>
 										</span>
 									</div>
-									<table class="table table-hover table-bordered" id="create-task-table">
+									<table class="table table-hover table-bordered"
+										id="create-task-table">
 										<thead>
 											<tr style="background-color: #06F; font-weight: bold">
 												<th><strong>Task Name</strong></th>
@@ -47,14 +48,25 @@
 											</tr>
 										</thead>
 										<tbody class="body-create-task">
-											
+											<tr>
+												<td><input type="text" class="form-control"
+													id="taskName0"></td>
+												<td><select class="form-control workStage"
+													id="workStage0">
+														<option value="">Select Work Stage</option>
+												</select></td>
+												<td><input type="number" class="form-control"
+													id="duration0"></td>
+												<td><button class="fa fa-plus btnAdd"
+														style="height: 30px"></button></td>
+											</tr>
 										</tbody>
 
 									</table>
 									<a href="javascript: void(0);" class="btn btn-sm btn-primary"
-								style="float: right" onclick="saveTask()">
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Save
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a>
+										style="float: right" onclick="saveTask()">
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Save
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a>
 								</div>
 								<div role="tabpanel" class="tab-pane fade" id="Section2">
 									<div class="card-header"
@@ -64,12 +76,13 @@
 										</span>
 									</div>
 									<div class="table-responsive mb-3">
-										<table class="table table-hover table-bordered" id="masterTaskReportTable">
+										<table class="table table-hover table-bordered"
+											id="masterTaskReportTable">
 											<thead>
 												<tr style="background-color: #06F; font-weight: bold">
 													<th><strong>Sl No</strong></th>
 													<th><strong>Task Name</strong></th>
-													<th><strong>Workk Stage</strong></th>
+													<th><strong>Work Stage</strong></th>
 													<th>Duration</th>
 													<th>Add More</th>
 												</tr>
@@ -78,6 +91,44 @@
 											</tbody>
 
 										</table>
+
+									</div>
+								</div>
+							</div>
+							<div class="modal fade" id="updateTaskModal" role="dialog">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header"></div>
+										<div class="modal-body">
+											<table class="table table-hover">
+												<thead>
+													<tr>
+														<th>Task Name</th>
+														<th>Work Stage</th>
+														<th>Duration</th>
+													</tr>
+												</thead>
+												<tbody class="body-update-task-table">
+													<tr>
+														<td><input type="text" class="form-control"
+															id="taskName">
+															<input type="hidden" class="form-control"
+															id="taskId">
+															</td>
+														<td><select class="form-control workStage"
+															id="workStage">
+																<option value="">Select Work Stage</option>
+														</select></td>
+														<td><input type="number" class="form-control"
+															id="duration"></td>
+													</tr>
+												</tbody>
+											</table>
+											<a href="javascript: void(0);" class="btn btn-sm btn-primary"
+										style="float: right" onclick="updateTask()">
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Update
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a>
+										</div>
 									</div>
 								</div>
 							</div>

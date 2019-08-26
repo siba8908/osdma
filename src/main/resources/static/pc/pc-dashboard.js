@@ -15,6 +15,7 @@ $(document).ready(function() {
 					this.taskStatus='<button type="button" class="btn btn-danger mr-2 mb-2">Rejected</button>';
 				}
 			});
+			console.log(data)
 			setTableData(data);
 		},
 		dataType : "json",
