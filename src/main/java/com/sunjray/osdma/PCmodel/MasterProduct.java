@@ -16,6 +16,10 @@ import javax.persistence.Table;
 @Table(name = "t_os_master_product", catalog = "osdma")
 public class MasterProduct implements java.io.Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private Integer productId;
 	private String productName;
 
