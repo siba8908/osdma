@@ -1,4 +1,4 @@
-package com.sunjray.osdma.PMrepository;
+package com.sunjray.osdma.PMRepository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
