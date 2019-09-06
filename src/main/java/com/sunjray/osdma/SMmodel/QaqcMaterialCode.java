@@ -39,8 +39,6 @@ public class QaqcMaterialCode implements java.io.Serializable {
 	private Integer phoneNo;
 	private String imeiNo;
 
-	@Column(name = "product_code", length = 45)
-	private String productCode;
 
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
@@ -119,14 +117,6 @@ public class QaqcMaterialCode implements java.io.Serializable {
 
 	public void setImeiNo(String imeiNo) {
 		this.imeiNo = imeiNo;
-	}
-
-	public String getProductCode() {
-		return productCode;
-	}
-
-	public void setProductCode(String productCode) {
-		this.productCode = productCode;
 	}
 
 }
