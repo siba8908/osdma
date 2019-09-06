@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.sunjray.osdma.PMmodel.HrUtilisation;
-import com.sunjray.osdma.PMrepository.HrUtilisationRepository;
+import com.sunjray.osdma.PMRepository.HrUtilisationRepository;
 
 @RestController
 @RequestMapping("/api")
