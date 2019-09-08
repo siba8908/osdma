@@ -35,15 +35,15 @@
 							<code></code>
 						</p>
 						<div class="table-responsive mb-6">
-							<table class="table table-hover table-bordered ">
+							<table class="table table-hover table-bordered " id = "productsTable">
 								<thead>
 									<tr
-										style="background-color: #09F; text-align: center; font-weight: bold;">
+										style="background-color: #09F; font-weight: bold;">
 										<th>Serial No</th>
 										<th>Product Name</th>
 										<th>Product Code</th>
-										<th>Description</th>
 										<th>Quantity</th>
+										<th>Status</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -115,6 +115,6 @@
 	<script src="vendors/data-table/buttons.print.min.js"></script>
 	<script src="vendors/data-table/buttons.colVis.min.js"></script>
 	<script src="vendors/data-table/datatables-init.js"></script>
-	<script src="pc/pc-daily-work-status.js"></script>
+	<script src="dw/product-list.js"></script>
 </body>
 </html>

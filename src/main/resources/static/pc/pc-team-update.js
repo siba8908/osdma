@@ -208,6 +208,7 @@ function updateTeamEmployee() {
 			swal({
 				position : 'top',
 				type : 'success',
+				title : '',
 				text : 'Team updated successfully.',
 				showConfirmButton : false,
 				timer : 2500
